@@ -1,14 +1,16 @@
+import useInputState from "../Hocks/useinputState";
 
-const SimpleForm = () => {
+const HockForm = () => {
+    const [name, handleNameChange] = useInputState('SHEIKH SHAADI')
+
     const handleSubmit = e =>{
+        console.log('form data', name)
         e.preventDefault();
-        console.log(e.target.name.value);
-        console.log(e.target.email.value)
-     }
+    }
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <input type="text" name="name" />
+                <input value={name} onChange={handleNameChange} type="text" name="name" />
                 <br />
                 <input type="email" name="email" id="" />
                 <br />
@@ -20,4 +22,4 @@ const SimpleForm = () => {
     );
 };
 
-export default SimpleForm;
+export default HockForm;
