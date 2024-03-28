@@ -3,15 +3,16 @@ import Anty from "../Anty/Anty";
 import Dad from "../Dad/Dad";
 import Uncle from "../Uncle/Uncle";
 import './GrandPa.css';
-
-const AssetContext = createContext('gold')
+ 
+export const AssetContext = createContext('gold')
+export const monyContext = createContext('20 Milion Dolar')
 
 const GrandPa = () => {
     const asset = 'daimond'
     return (
         <div className="grandpa">
             <h2>Grandpa</h2>
-            <AssetContext.Provider value="gold">
+            <AssetContext.Provider value="Gold">
                 <section className="flex">
                     <Dad asset={asset}></Dad>
                     <Uncle></Uncle>
