@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 
 const ReuseableForm = ({ children, handleSubmit, submitBtnText = 'Submit'}) => {
 
@@ -27,5 +29,8 @@ const ReuseableForm = ({ children, handleSubmit, submitBtnText = 'Submit'}) => {
         </div>
     );
 };
+// ReuseableForm.propTypes = {
+//     handleLocalSubmit: PropTypes.object
+// }
 
 export default ReuseableForm;
